@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 
 	addNums()
-	addAll()
+	addMultiples()
 }
 
 func addNums() {
@@ -32,4 +32,18 @@ func addAll() {
 		total += i
 	}
 	fmt.Printf("The total sum of all numbers from 1 to %v is %v.\n", n, total)
+}
+
+func addMultiples() {
+
+	var num int
+
+	fmt.Print("Please enter a whole number: ")
+	fmt.Scanf("%v", &num)
+	var total int
+	for n := 3; n < num && n%3 == 0; n++ {
+		total += n
+	}
+	fmt.Printf("The total sum of all numbers divisible by 3 to %v is equal to %v.\n", num, total)
+
 }
