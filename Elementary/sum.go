@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 
-	addNums()
+	// addNums()
 	addMultiples()
 }
 
@@ -41,9 +41,12 @@ func addMultiples() {
 	fmt.Print("Please enter a whole number: ")
 	fmt.Scanf("%v", &num)
 	var total int
-	for n := 3; n < num && n%3 == 0; n++ {
-		total += n
+	for n := 0; n <= num; n++ {
+		if n%3 == 0 || n%5 == 0 {
+			total += n
+		}
 	}
-	fmt.Printf("The total sum of all numbers divisible by 3 to %v is equal to %v.\n", num, total)
+
+	fmt.Printf("The total sum of all numbers divisible by 3 or 5 to %v is equal to %v.\n", num, total)
 
 }
